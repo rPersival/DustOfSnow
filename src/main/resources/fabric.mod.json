@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "snowdust",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Dust of Snow",
+  "description": "Description will be here someday",
   "authors": [
-    "Me!"
+    "rPersival"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://nothinghereyet.net/",
+    "sources": "https://github.com/rPersival/DustOfSnow"
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/snowdust/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "com.rpersival.snowdust.DustOfSnow"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "snowdust.mixins.json"
   ],
 
   "depends": {
