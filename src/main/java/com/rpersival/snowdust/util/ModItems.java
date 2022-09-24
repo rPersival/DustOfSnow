@@ -10,11 +10,17 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class ModItems {
+
+    // Items
     public static final Pair<Item, String> CUSTOM = new Pair<>(
             new ItemBase(), "custom");
 
     public static final Pair<Item, String> ANOTHER_ITEM = new Pair<>(
             new ItemBase(), "another_item");
+
+
+    // BlockItems
+
 
     @SuppressWarnings("unchecked")
     public static List<Pair<Item, String>> getModItems() {

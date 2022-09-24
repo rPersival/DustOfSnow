@@ -19,6 +19,7 @@ public class DustOfSnow implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 		ModRegistry.registerItems();
+		ModRegistry.registerBlocks();
 		LOGGER.info("Hello from Dust of Snow!");
 	}
 }
