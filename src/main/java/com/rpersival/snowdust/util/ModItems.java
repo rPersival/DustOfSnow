@@ -18,6 +18,12 @@ public class ModItems {
     public static final Pair<Item, String> ANOTHER_ITEM = new Pair<>(
             new Item(ItemSettingsGenerator.getDefaultItemSettings()), "another_item");
 
+    public static final Pair<Item, String> TRUE_ICE = new Pair<>(
+            new Item(ItemSettingsGenerator.getDefaultItemSettings()), "true_ice");
+
+    public static final Pair<Item, String> ICE_INGOT = new Pair<>(
+            new Item(ItemSettingsGenerator.getDefaultItemSettings()), "ice_ingot");
+
     @SuppressWarnings("unchecked")
     public static List<Pair<Item, String>> getModItems() {
         return Arrays.stream(ModItems.class.getDeclaredFields())
