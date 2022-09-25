@@ -1,6 +1,6 @@
 package com.rpersival.snowdust.util;
 
-import items.ItemBase;
+import com.rpersival.snowdust.items.ItemSettingsGenerator;
 import net.minecraft.item.Item;
 import net.minecraft.util.Pair;
 
@@ -13,14 +13,10 @@ public class ModItems {
 
     // Items
     public static final Pair<Item, String> CUSTOM = new Pair<>(
-            new ItemBase(), "custom");
+            new Item(ItemSettingsGenerator.getDefaultItemSettings()), "custom");
 
     public static final Pair<Item, String> ANOTHER_ITEM = new Pair<>(
-            new ItemBase(), "another_item");
-
-
-    // BlockItems
-
+            new Item(ItemSettingsGenerator.getDefaultItemSettings()), "another_item");
 
     @SuppressWarnings("unchecked")
     public static List<Pair<Item, String>> getModItems() {

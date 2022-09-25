@@ -1,10 +1,10 @@
 package com.rpersival.snowdust.util;
 
+import com.rpersival.snowdust.blocks.ItemBlock;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.util.Pair;
 
 import java.lang.reflect.Modifier;
 import java.util.Arrays;
@@ -13,17 +13,17 @@ import java.util.stream.Collectors;
 
 public class ModBlocks {
 
-    public static final Pair<Block, String> TEST_BLOCK = new Pair<>(
-            new Block(FabricBlockSettings.of(Material.WOOL).strength(0.5f).sounds(BlockSoundGroup.WOOL)),
-            "test_block");
+    public static final ItemBlock TEST_BLOCK = new ItemBlock(
+            "test_block",
+            new Block(FabricBlockSettings.of(Material.WOOL).strength(0.5f).sounds(BlockSoundGroup.WOOL))
+    );
 
-    @SuppressWarnings("unchecked")
-    public static List<Pair<Block, String>> getModBlocks() {
+    public static List<ItemBlock> getModBlocks() {
         return Arrays.stream(ModBlocks.class.getDeclaredFields())
                 .filter(field -> Modifier.isStatic(field.getModifiers()))
                 .map(field -> {
                     try {
-                        return (Pair<Block, String>) field.get(ModBlocks.class);
+                        return (ItemBlock) field.get(ModBlocks.class);
                     } catch (IllegalAccessException e) {
                         throw new RuntimeException(e);
                     }
