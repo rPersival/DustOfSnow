@@ -1,0 +1,12 @@
+{
+  "type": "snowdust:test_structure_feature",
+
+  "config": {
+    "start_pool": "snowdust:test_structure_pool",
+    "size": 1
+  },
+
+  "biomes": "#snowdust:has_structure/test_structure_biomes",
+  "adapt_noise": false,
+  "spawn_overrides": { }
+}
