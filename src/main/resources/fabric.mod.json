@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "com.rpersival.snowdust.DustOfSnow"
+    ],
+    "client": [
+      "com.rpersival.snowdust.DustOfSnowClient"
     ]
   },
   "mixins": [

@@ -1,6 +1,5 @@
 package com.rpersival.snowdust;
 
-import com.rpersival.snowdust.util.ModBlocks;
 import com.rpersival.snowdust.util.ModRegistry;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
@@ -16,7 +15,6 @@ public class DustOfSnow implements ModInitializer {
 		LOGGER.info("Hello from Dust of Snow!");
 
 		registerEverything();
-		ModBlocks.putTransparentBlocksToRenderLayerMap();
 	}
 
 	public static void registerEverything() {
