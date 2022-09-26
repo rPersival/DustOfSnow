@@ -1,7 +1,10 @@
 package com.rpersival.snowdust.util;
 
+import com.rpersival.snowdust.items.IceAxeItem;
 import com.rpersival.snowdust.items.ItemSettingsGenerator;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ToolItem;
 import net.minecraft.util.Pair;
 
 import java.lang.reflect.Modifier;
@@ -11,7 +14,6 @@ import java.util.stream.Collectors;
 
 public class ModItems {
 
-    // Items
     public static final Pair<Item, String> CUSTOM = new Pair<>(
             new Item(ItemSettingsGenerator.getDefaultItemSettings()), "custom");
 
@@ -23,6 +25,10 @@ public class ModItems {
 
     public static final Pair<Item, String> ICE_INGOT = new Pair<>(
             new Item(ItemSettingsGenerator.getDefaultItemSettings()), "ice_ingot");
+
+    public static final Pair<ToolItem, String> ICE_AXE = new Pair<>(
+            new IceAxeItem(5.5f, -2.4f, ModMaterials.TRUE_ICE_MATERIAL,
+                    ItemSettingsGenerator.getDefaultItemSettings(ItemGroup.COMBAT)), "ice_axe");
 
     @SuppressWarnings("unchecked")
     public static List<Pair<Item, String>> getModItems() {
