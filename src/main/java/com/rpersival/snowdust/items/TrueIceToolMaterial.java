@@ -1,6 +1,5 @@
 package com.rpersival.snowdust.items;
 
-import com.rpersival.snowdust.util.ModItems;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 

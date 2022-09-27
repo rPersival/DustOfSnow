@@ -2,6 +2,8 @@ package com.rpersival.snowdust.util;
 
 import com.rpersival.snowdust.DustOfSnow;
 import com.rpersival.snowdust.blocks.ItemBlock;
+import com.rpersival.snowdust.blocks.ModBlocks;
+import com.rpersival.snowdust.items.ModItems;
 import com.rpersival.snowdust.mixin.StructureFeatureAccessor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;

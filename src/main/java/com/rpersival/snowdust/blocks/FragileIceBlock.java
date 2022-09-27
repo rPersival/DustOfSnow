@@ -1,18 +1,25 @@
 package com.rpersival.snowdust.blocks;
 
-import net.minecraft.block.BlockState;
-import net.minecraft.block.IceBlock;
+import net.minecraft.block.*;
+import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.stat.Stats;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
 
 public class FragileIceBlock extends IceBlock {
 
-    public FragileIceBlock(Settings settings) {
+    protected boolean doMelt;
+
+    public FragileIceBlock(Settings settings, boolean doMelt) {
         super(settings);
+        this.doMelt = doMelt;
     }
 
     @Override
@@ -27,8 +34,21 @@ public class FragileIceBlock extends IceBlock {
         this.breakIce(world, state, pos, entity);
     }
 
+    @Override
+    public void afterBreak(World world, PlayerEntity player, BlockPos pos, BlockState state,
+                           @Nullable BlockEntity blockEntity, ItemStack stack) {
+        if (doMelt) {
+            super.afterBreak(world, player, pos, state, blockEntity, stack);
+            return;
+        }
+        player.incrementStat(Stats.MINED.getOrCreateStat(this));
+        player.addExhaustion(0.005f);
+        Block.dropStacks(state, world, pos, blockEntity, player, stack);
+    }
+
     private void breakIce(World world, BlockState currentState, BlockPos pos, Entity entity) {
-        if (entity instanceof PlayerEntity && ((PlayerEntity) entity).isCreative()) return;
+        if (!(entity instanceof LivingEntity) ||
+                entity instanceof PlayerEntity && ((PlayerEntity) entity).isCreative()) return;
         MinecraftServer server = entity.getServer();
 
         if (server != null) {
@@ -39,13 +59,19 @@ public class FragileIceBlock extends IceBlock {
         }
     }
 
+    @Override
+    protected void melt(BlockState state, World world, BlockPos pos) {
+        if (doMelt)
+            super.melt(state, world, pos);
+    }
+
     public void breakAdjacentBlocks(ServerWorld world, BlockPos pos, BlockState state, Entity entity) {
 
         double decimalX = entity.prevX - (int) entity.prevX;
         double decimalZ = entity.prevZ - (int) entity.prevZ;
 
-        int xOffset = decimalX > 0.65 ? 1 : decimalX < 0.35 ? -1 : 0;
-        int zOffset = decimalZ > 0.65 ? 1 : decimalZ < 0.35 ? -1 : 0;
+        int xOffset = decimalX > 0.71 ? 1 : decimalX < 0.29 ? -1 : 0;
+        int zOffset = decimalZ > 0.71 ? 1 : decimalZ < 0.29 ? -1 : 0;
 
         BlockPos[] blockPos = { pos.south(zOffset), pos.east(xOffset), pos.east(xOffset).south(zOffset) };
 
@@ -54,6 +80,5 @@ public class FragileIceBlock extends IceBlock {
                     && world.getBlockState(currentPos).equals(state)) {
                 world.breakBlock(currentPos, false);
             }
-
     }
 }

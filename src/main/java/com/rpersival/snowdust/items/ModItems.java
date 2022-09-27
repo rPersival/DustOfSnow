@@ -1,8 +1,6 @@
-package com.rpersival.snowdust.util;
+package com.rpersival.snowdust.items;
 
-import com.rpersival.snowdust.items.IceAxeItem;
-import com.rpersival.snowdust.items.ItemSettingsGenerator;
-import net.minecraft.entity.ItemEntity;
+import com.rpersival.snowdust.util.ModMaterials;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ToolItem;
@@ -29,7 +27,7 @@ public class ModItems {
             new Item(ItemSettingsGenerator.getDefaultItemSettings()), "ice_ingot");
 
     public static final Pair<ToolItem, String> ICE_AXE = new Pair<>(
-            new IceAxeItem(5.5f, -2.4f, ModMaterials.TRUE_ICE_MATERIAL,
+            new IceAxeItem(10, -3.0f, ModMaterials.TRUE_ICE_MATERIAL,
                     ItemSettingsGenerator.getDefaultItemSettings(ItemGroup.COMBAT).rarity(Rarity.EPIC)), "ice_axe");
 
     public static final Pair<Item, String> ICE_STICK = new Pair<>(

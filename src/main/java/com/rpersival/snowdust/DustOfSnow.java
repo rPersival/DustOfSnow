@@ -1,5 +1,6 @@
 package com.rpersival.snowdust;
 
+import com.rpersival.snowdust.util.LootTableInjection;
 import com.rpersival.snowdust.util.ModRegistry;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
@@ -21,5 +22,6 @@ public class DustOfSnow implements ModInitializer {
 		ModRegistry.registerItems();
 		ModRegistry.registerBlocks();
 		ModRegistry.registerStructureFeatures();
+		LootTableInjection.injectIntoVanillaLootTable();
 	}
 }

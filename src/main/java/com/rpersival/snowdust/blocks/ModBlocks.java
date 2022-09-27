@@ -1,7 +1,5 @@
-package com.rpersival.snowdust.util;
+package com.rpersival.snowdust.blocks;
 
-import com.rpersival.snowdust.blocks.FragileIceBlock;
-import com.rpersival.snowdust.blocks.ItemBlock;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -25,7 +23,7 @@ public class ModBlocks {
             "breakable_ice",
             new FragileIceBlock(FabricBlockSettings.of(Material.ICE).strength(0.5f)
                     .slipperiness(0.98f).ticksRandomly()
-                    .sounds(BlockSoundGroup.GLASS).nonOpaque())
+                    .sounds(BlockSoundGroup.GLASS).nonOpaque(), false)
     );
 
     public static List<ItemBlock> getModBlocks() {

@@ -4,6 +4,7 @@
   "package": "com.rpersival.snowdust.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "IceBlockMixin",
     "StructureFeatureAccessor"
   ],
   "client": [
