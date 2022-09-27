@@ -1,5 +1,12 @@
 {
   "item.snowdust.custom": "Item #1",
   "item.snowdust.another_item": "Item #2",
-  "block.snowdust.test_block": "Heisenberg"
+  "item.snowdust.breath_of_winter": "Breath of winter",
+  "item.snowdust.ice_ingot": "Ice ingot",
+  "item.snowdust.ice_axe": "Ice axe",
+  "item.snowdust.true_ice": "True ice",
+  "item.snowdust.ice_stick": "Ice stick",
+
+  "block.snowdust.test_block": "Heisenberg",
+  "block.snowdust.breakable_ice": "Breakable ice"
 }
