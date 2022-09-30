@@ -19,8 +19,10 @@ public abstract class IceBlockMixin extends TransparentBlock {
     @Inject(at = @At("HEAD"),
             method = "afterBreak(Lnet/minecraft/world/World;" +
             "Lnet/minecraft/entity/player/PlayerEntity;" +
-            "Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;" +
-            "Lnet/minecraft/block/entity/BlockEntity;Lnet/minecraft/item/ItemStack;)V",
+            "Lnet/minecraft/util/math/BlockPos;" +
+            "Lnet/minecraft/block/BlockState;" +
+            "Lnet/minecraft/block/entity/BlockEntity;" +
+            "Lnet/minecraft/item/ItemStack;)V",
         cancellable = true)
     public void afterBreak(World world, PlayerEntity player, BlockPos pos, BlockState state,
                            @Nullable BlockEntity blockEntity, ItemStack stack,

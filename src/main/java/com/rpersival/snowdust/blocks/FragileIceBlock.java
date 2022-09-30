@@ -2,6 +2,7 @@ package com.rpersival.snowdust.blocks;
 
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -70,8 +71,11 @@ public class FragileIceBlock extends IceBlock {
         double decimalX = entity.prevX - (int) entity.prevX;
         double decimalZ = entity.prevZ - (int) entity.prevZ;
 
-        int xOffset = decimalX > 0.71 ? 1 : decimalX < 0.29 ? -1 : 0;
-        int zOffset = decimalZ > 0.71 ? 1 : decimalZ < 0.29 ? -1 : 0;
+        int xOffset = decimalX >= 0 ? (decimalX > 0.7 ? 1 : decimalX < 0.3 ? -1 : 0) :
+                (decimalX < -0.7 ? -1 : decimalX > -0.3 ? 1 : 0);
+
+        int zOffset = decimalZ >= 0 ? (decimalZ > 0.7 ? 1 : decimalZ < 0.3 ? -1 : 0) :
+                (decimalZ < -0.7 ? -1 : decimalZ > -0.3 ? 1 : 0);
 
         BlockPos[] blockPos = { pos.south(zOffset), pos.east(xOffset), pos.east(xOffset).south(zOffset) };
 
@@ -81,4 +85,10 @@ public class FragileIceBlock extends IceBlock {
                 world.breakBlock(currentPos, false);
             }
     }
+
+    @Override
+    public PistonBehavior getPistonBehavior(BlockState state) {
+        return PistonBehavior.DESTROY;
+    }
+
 }

@@ -28,7 +28,8 @@ public class ModBlocks {
     );
     public static final ItemBlock CRAUNIUM_ORE = new ItemBlock(
             "craunium_ore",
-            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.4f, 50.0f).sounds(BlockSoundGroup.STONE))
+            new OreBlock(FabricBlockSettings.of(Material.STONE)
+                    .strength(1.4f, 50.0f).sounds(BlockSoundGroup.STONE))
     );
 
     public static List<ItemBlock> getModBlocks() {

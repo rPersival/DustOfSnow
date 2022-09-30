@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 
 public class ModItems {
 
-    //items
+    // Items
     public static final Pair<Item, String> CUSTOM = new Pair<>(
             new Item(ItemSettingsGenerator.getDefaultItemSettings()), "custom");
 
@@ -41,28 +41,28 @@ public class ModItems {
             new Item(ItemSettingsGenerator.getDefaultItemSettings()), "craunium");
 
 
-    //tools
+    // Tools
     public static final Pair<ToolItem, String> ICE_AXE = new Pair<>(
             new IceAxeItem(6, -2.4f, ModMaterials.TRUE_ICE_MATERIAL,
                     ItemSettingsGenerator.getDefaultItemSettings().rarity(Rarity.EPIC)), "ice_axe");
 
 
-    //armor
-    public static final Pair<Item, String> TRUE_ICE_HELMET = new Pair<>(
-            new ArmorItem(ModMaterials.TRUE_ICE_ARMOR_MATERIAL, EquipmentSlot.HEAD, ItemSettingsGenerator.getDefaultItemSettings().rarity(Rarity.EPIC)),
-            "true_ice_helmet");
+    // Armor
+    public static final Pair<ArmorItem, String> TRUE_ICE_HELMET = new Pair<>(
+            new ArmorItem(ModMaterials.TRUE_ICE_ARMOR_MATERIAL, EquipmentSlot.HEAD,
+                    ItemSettingsGenerator.getDefaultItemSettings().rarity(Rarity.EPIC)), "ice_helmet");
 
-    public static final Pair<Item, String> TRUE_ICE_CHESTPLATE = new Pair<>(
-            new ArmorItem(ModMaterials.TRUE_ICE_ARMOR_MATERIAL, EquipmentSlot.CHEST, ItemSettingsGenerator.getDefaultItemSettings().rarity(Rarity.EPIC)),
-            "true_ice_chestplate");
+    public static final Pair<ArmorItem, String> TRUE_ICE_CHESTPLATE = new Pair<>(
+            new ArmorItem(ModMaterials.TRUE_ICE_ARMOR_MATERIAL, EquipmentSlot.CHEST,
+                    ItemSettingsGenerator.getDefaultItemSettings().rarity(Rarity.EPIC)), "ice_chestplate");
 
-    public static final Pair<Item, String> TRUE_ICE_LEGGINS = new Pair<>(
-            new ArmorItem(ModMaterials.TRUE_ICE_ARMOR_MATERIAL, EquipmentSlot.LEGS, ItemSettingsGenerator.getDefaultItemSettings().rarity(Rarity.EPIC)),
-            "true_ice_leggins");
+    public static final Pair<ArmorItem, String> TRUE_ICE_LEGGINS = new Pair<>(
+            new ArmorItem(ModMaterials.TRUE_ICE_ARMOR_MATERIAL, EquipmentSlot.LEGS,
+                    ItemSettingsGenerator.getDefaultItemSettings().rarity(Rarity.EPIC)), "ice_leggins");
 
-    public static final Pair<Item, String> TRUE_ICE_BOOTS = new Pair<>(
-            new ArmorItem(ModMaterials.TRUE_ICE_ARMOR_MATERIAL, EquipmentSlot.FEET, ItemSettingsGenerator.getDefaultItemSettings().rarity(Rarity.EPIC)),
-            "true_ice_boots");
+    public static final Pair<ArmorItem, String> TRUE_ICE_BOOTS = new Pair<>(
+            new ArmorItem(ModMaterials.TRUE_ICE_ARMOR_MATERIAL, EquipmentSlot.FEET,
+                    ItemSettingsGenerator.getDefaultItemSettings().rarity(Rarity.EPIC)), "ice_boots");
 
 
 

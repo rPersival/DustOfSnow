@@ -2,6 +2,6 @@
   "parent": "item/generated",
   "textures":
   {
-    "layer0": "snowdust:item/true_ice_boots"
+    "layer0": "snowdust:item/ice_chestplate"
   }
 }
