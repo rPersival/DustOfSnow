@@ -1,9 +1,9 @@
 package com.rpersival.snowdust.blocks;
 
 import com.rpersival.snowdust.items.ItemSettingsGenerator;
+import com.rpersival.snowdust.util.ModItemsGroup;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 
 public class ItemBlock {
 
@@ -20,7 +20,7 @@ public class ItemBlock {
     public ItemBlock(String name, Block block) {
         this.name = name;
         this.block = block;
-        this.itemSettings = ItemSettingsGenerator.getDefaultItemSettings(ItemGroup.BUILDING_BLOCKS);
+        this.itemSettings = ItemSettingsGenerator.getDefaultItemSettings(ModItemsGroup.DUST_OF_SNOW_GROUP);
     }
 
     public String getName() {

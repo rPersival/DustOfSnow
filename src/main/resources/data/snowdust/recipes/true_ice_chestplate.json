@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ITI",
+    "ISI",
+    "III"
+  ],
+  "key": {
+    "T": {
+      "item": "snowdust:true_ice"
+    },
+    "S": {
+      "item": "snowdust:snow_essence"
+    },
+    "I": {
+      "item": "snowdust:ice_ingot"
+    }
+  },
+  "result": {
+    "item": "snowdust:true_ice_chestplate",
+    "count": 1
+  }
+}

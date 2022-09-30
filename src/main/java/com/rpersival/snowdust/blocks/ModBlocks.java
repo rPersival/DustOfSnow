@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
+import net.minecraft.block.OreBlock;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.sound.BlockSoundGroup;
 
@@ -24,6 +25,10 @@ public class ModBlocks {
             new FragileIceBlock(FabricBlockSettings.of(Material.ICE).strength(0.5f)
                     .slipperiness(0.98f).ticksRandomly()
                     .sounds(BlockSoundGroup.GLASS).nonOpaque(), false)
+    );
+    public static final ItemBlock CRAUNIUM_ORE = new ItemBlock(
+            "craunium_ore",
+            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(1.4f, 50.0f).sounds(BlockSoundGroup.STONE))
     );
 
     public static List<ItemBlock> getModBlocks() {

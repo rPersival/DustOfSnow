@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "BC ",
+    "   "
+  ],
+  "key": {
+    "B": {
+      "item": "snowdust:breath_of_winter"
+    },
+    "C": {
+      "item": "snowdust:craunium"
+    }
+  },
+  "result": {
+    "item": "snowdust:ice_ingot",
+    "count": 1
+  }
+}
