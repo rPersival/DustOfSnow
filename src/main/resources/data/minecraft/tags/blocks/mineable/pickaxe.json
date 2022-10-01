@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "snowdust:breakable_ice",
+    "snowdust:craunium_ore",
+    "snowdust:deepslate_craunium_ore"
+  ]
+}

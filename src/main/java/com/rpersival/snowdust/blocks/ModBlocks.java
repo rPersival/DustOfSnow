@@ -29,7 +29,13 @@ public class ModBlocks {
     public static final ItemBlock CRAUNIUM_ORE = new ItemBlock(
             "craunium_ore",
             new OreBlock(FabricBlockSettings.of(Material.STONE)
-                    .strength(1.4f, 50.0f).sounds(BlockSoundGroup.STONE))
+                    .strength(1.4f).sounds(BlockSoundGroup.STONE).requiresTool())
+    );
+
+    public static final ItemBlock DEEPSLATE_CRAUNIUM_ORE = new ItemBlock(
+            "deepslate_craunium_ore",
+            new OreBlock(FabricBlockSettings.of(Material.STONE)
+                    .strength(1.6f).sounds(BlockSoundGroup.DEEPSLATE).requiresTool())
     );
 
     public static List<ItemBlock> getModBlocks() {

@@ -16,5 +16,6 @@
 
   "block.snowdust.test_block": "Heisenberg",
   "block.snowdust.craunium_ore":"Craunium Ore",
+  "block.snowdust.deepslate_craunium_ore" : "Deepslate Craunium Ore",
   "block.snowdust.breakable_ice": "Fragile Ice"
 }
