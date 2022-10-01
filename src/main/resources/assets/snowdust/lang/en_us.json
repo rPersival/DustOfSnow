@@ -1,6 +1,4 @@
 {
-  "item.snowdust.custom": "Item #1",
-  "item.snowdust.another_item": "Item #2",
   "item.snowdust.breath_of_winter": "Breath of the Winter",
   "item.snowdust.ice_ingot": "Ice Ingot",
   "item.snowdust.ice_axe": "Ice Axe",
@@ -15,7 +13,7 @@
   "item.snowdust.ice_boots": "Ice Boots",
 
   "block.snowdust.test_block": "Heisenberg",
-  "block.snowdust.craunium_ore":"Craunium Ore",
-  "block.snowdust.deepslate_craunium_ore" : "Deepslate Craunium Ore",
+  "block.snowdust.craunium_ore": "Craunium Ore",
+  "block.snowdust.deepslate_craunium_ore": "Deepslate Craunium Ore",
   "block.snowdust.breakable_ice": "Fragile Ice"
 }

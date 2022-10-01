@@ -33,6 +33,11 @@ public class ModRegistry {
         }
     }
 
+    public static void registerOres() {
+        for (Ore ore : ModOres.getModItems())
+            ore.register();
+    }
+
     public static void registerStructureFeatures() {
         List<Pair<StructureFeature<?>, String>> structureFeatures = ModStructureFeatures.getStructureFeatures();
 

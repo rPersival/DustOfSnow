@@ -16,12 +16,6 @@ import java.util.stream.Collectors;
 public class ModItems {
 
     // Items
-    public static final Pair<Item, String> CUSTOM = new Pair<>(
-            new Item(ItemSettingsGenerator.getDefaultItemSettings()), "custom");
-
-    public static final Pair<Item, String> ANOTHER_ITEM = new Pair<>(
-            new Item(ItemSettingsGenerator.getDefaultItemSettings()), "another_item");
-
     public static final Pair<Item, String> TRUE_ICE = new Pair<>(
             new Item(ItemSettingsGenerator.getDefaultItemSettings().rarity(Rarity.RARE)), "true_ice");
 

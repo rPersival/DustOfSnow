@@ -1,8 +1,8 @@
 package com.rpersival.snowdust;
 
 import com.rpersival.snowdust.util.LootTableInjection;
+import com.rpersival.snowdust.util.ModOres;
 import com.rpersival.snowdust.util.ModRegistry;
-import com.rpersival.snowdust.world.gen.ore.ModOreGeneration;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,7 +23,7 @@ public class DustOfSnow implements ModInitializer {
 		ModRegistry.registerItems();
 		ModRegistry.registerBlocks();
 		ModRegistry.registerStructureFeatures();
-		ModOreGeneration.generateOres();
+		ModOres.generateOres();
 		LootTableInjection.injectIntoVanillaLootTable();
 	}
 }

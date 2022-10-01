@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "III",
     "ITI",
-    "ISI"
+    "ISI",
+    "I I"
   ],
   "key": {
     "T": {
@@ -17,7 +17,7 @@
     }
   },
   "result": {
-    "item": "snowdust:true_ice_leggins",
+    "item": "snowdust:ice_leggins",
     "count": 1
   }
 }
