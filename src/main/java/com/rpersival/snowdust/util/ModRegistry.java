@@ -34,7 +34,7 @@ public class ModRegistry {
     }
 
     public static void registerOres() {
-        for (Ore ore : ModOres.getModItems())
+        for (Ore ore : ModOres.getOres())
             ore.register();
     }
 

@@ -10,13 +10,12 @@ import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.world.gen.feature.OreConfiguredFeatures;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 
-import java.lang.reflect.Modifier;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class ModOres {
 
+    @Register
     public static final Ore CRAUNIUM_ORE = new Ore("craunium_ore", 4, -80, 80,
             getOverworldOreFeatureConfig(ModBlocks.CRAUNIUM_ORE.getBlock(),
                     ModBlocks.DEEPSLATE_CRAUNIUM_ORE.getBlock(), 4));
@@ -43,17 +42,8 @@ public class ModOres {
             CRAUNIUM_ORE.addFeatures(allowedBiomes);
     }
 
-    public static List<Ore> getModItems() {
-        return Arrays.stream(ModOres.class.getDeclaredFields())
-                .filter(field -> Modifier.isStatic(field.getModifiers()))
-                .map(field -> {
-                    try {
-                        return (Ore) field.get(ModOres.class);
-                    } catch (IllegalAccessException e) {
-                        throw new RuntimeException(e);
-                    }
-                })
-                .collect(Collectors.toList());
+    public static List<Ore> getOres() {
+        return Util.getRegistryFields(ModOres.class, Ore.class);
     }
 
     private static OreFeatureConfig getOverworldOreFeatureConfig(Block overworldBlock, Block deepSlateBlock, int size) {
