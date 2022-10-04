@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "snowdust:jigsaw_test",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 276345623,
+    "spacing": 32,
+    "separation": 12,
+    "type": "minecraft:random_spread"
+  }
+}

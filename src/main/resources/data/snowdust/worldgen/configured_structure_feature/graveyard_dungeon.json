@@ -1,0 +1,12 @@
+{
+  "type": "snowdust:graveyard_dungeon_feature",
+
+  "config": {
+    "start_pool": "snowdust:graveyard_dungeon_pool",
+    "size": 1
+  },
+
+  "biomes": "#snowdust:has_structure/graveyard_dungeon_biomes",
+  "adapt_noise": false,
+  "spawn_overrides": { }
+}

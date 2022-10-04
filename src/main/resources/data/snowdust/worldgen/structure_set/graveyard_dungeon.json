@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "snowdust:graveyard_dungeon",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 1287365261,
+    "spacing": 32,
+    "separation": 12,
+    "type": "minecraft:random_spread"
+  }
+}
