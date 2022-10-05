@@ -12,7 +12,7 @@ public class TrueIceToolMaterial implements ToolMaterial {
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 1.0f;
+        return 10.0f;
     }
 
     @Override
@@ -22,7 +22,7 @@ public class TrueIceToolMaterial implements ToolMaterial {
 
     @Override
     public int getMiningLevel() {
-        return 0;
+        return 3;
     }
 
     @Override
