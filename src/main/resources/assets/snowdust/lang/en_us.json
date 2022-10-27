@@ -6,6 +6,9 @@
   "item.snowdust.ice_stick": "Ice Stick",
   "item.snowdust.craunium":"Craunium",
   "item.snowdust.snow_essence":"Snow Essence",
+  "item.snowdust.soul_sickle": "Soul Sickle",
+  "item.snowdust.desert_stick": "Desert Stick",
+  "item.snowdust.sealed_souls": "Sealed Souls",
 
   "enchantment.snowdust.ice_rejection": "Ice Rejection",
 
@@ -17,5 +20,7 @@
   "block.snowdust.test_block": "Heisenberg",
   "block.snowdust.craunium_ore": "Craunium Ore",
   "block.snowdust.deepslate_craunium_ore": "Deepslate Craunium Ore",
-  "block.snowdust.breakable_ice": "Fragile Ice"
+  "block.snowdust.breakable_ice": "Fragile Ice",
+  "block.snowdust.dense_sandstone_bricks": "Dense Sandstone Bricks",
+  "block.snowdust.quick_sand": "Quick Sand"
 }

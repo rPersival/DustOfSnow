@@ -42,6 +42,18 @@ public class ModBlocks {
                     .strength(1.6f).sounds(BlockSoundGroup.DEEPSLATE).requiresTool())
     );
 
+    @Register
+    public static final ItemBlock DENSE_SANDSTONE_BRICKS = new ItemBlock(
+            "dense_sandstone_bricks",
+            new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(40.0f, 1200.0f))
+    );
+
+    @Register
+    public static final ItemBlock QUICK_SAND = new ItemBlock(
+            "quick_sand",
+            new Block(FabricBlockSettings.of(Material.AGGREGATE).strength(0.5f).sounds(BlockSoundGroup.SAND))
+    );
+
     public static List<ItemBlock> getModBlocks() {
         return Util.getRegistryFields(ModBlocks.class, ItemBlock.class);
     }
