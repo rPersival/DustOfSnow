@@ -3,6 +3,7 @@
   "values": [
     "snowdust:breakable_ice",
     "snowdust:craunium_ore",
-    "snowdust:deepslate_craunium_ore"
+    "snowdust:deepslate_craunium_ore",
+    "snowdust:dense_sandstone_bricks"
   ]
 }

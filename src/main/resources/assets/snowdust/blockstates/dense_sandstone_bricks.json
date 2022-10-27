@@ -1,0 +1,6 @@
+{
+  "variants":
+  {
+    "": { "model": "snowdust:block/dense_sandstone_bricks" }
+  }
+}

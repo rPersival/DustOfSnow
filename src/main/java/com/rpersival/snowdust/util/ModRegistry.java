@@ -3,7 +3,7 @@ package com.rpersival.snowdust.util;
 import com.rpersival.snowdust.DustOfSnow;
 import com.rpersival.snowdust.blocks.ItemBlock;
 import com.rpersival.snowdust.blocks.ModBlocks;
-import com.rpersival.snowdust.enchantment.IceRejectionEnchantment;
+import com.rpersival.snowdust.enchantment.ModEnchantments;
 import com.rpersival.snowdust.items.ModItems;
 import com.rpersival.snowdust.mixin.StructureFeatureAccessor;
 import net.minecraft.enchantment.Enchantment;
@@ -35,9 +35,9 @@ public class ModRegistry {
         }
     }
 
-    public static void registerEnchantment(){
-         Enchantment ICE_REJECTION = Registry.register(Registry.ENCHANTMENT,
-                new Identifier(DustOfSnow.MOD_ID, "ice_rejection"), new IceRejectionEnchantment());
+    public static void registerEnchantment() {
+        for (Pair<Enchantment, String> enchantment : ModEnchantments.getEnchantments())
+            register(Registry.ENCHANTMENT, enchantment.getLeft(), enchantment.getRight());
     }
 
     public static void registerOres() {
