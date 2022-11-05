@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "snowdust:craunium_ore",
-    "snowdust:deepslate_craunium_ore"
+    "snowdust:deepslate_craunium_ore",
+    "snowdust:oknum_ore",
+    "snowdust:deepslate_oknum_ore"
   ]
 }

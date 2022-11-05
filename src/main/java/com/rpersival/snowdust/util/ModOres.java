@@ -20,9 +20,15 @@ public class ModOres {
             getOverworldOreFeatureConfig(ModBlocks.CRAUNIUM_ORE.getBlock(),
                     ModBlocks.DEEPSLATE_CRAUNIUM_ORE.getBlock(), 4));
 
+    @Register
+    public static final Ore OKNUM_ORE = new Ore("oknum_ore", 4, -80, 80,
+            getOverworldOreFeatureConfig(ModBlocks.OKNUM_ORE.getBlock(),
+                    ModBlocks.DEEPSLATE_OKNUM_ORE.getBlock(), 4));
+
     public static void generateOres() {
         ModRegistry.registerOres();
         addCrauniumFeatures();
+        addOknumFeatures();
     }
 
     public static void addCrauniumFeatures() {
@@ -40,6 +46,16 @@ public class ModOres {
 
         if (CRAUNIUM_ORE.isRegistered())
             CRAUNIUM_ORE.addFeatures(allowedBiomes);
+    }
+
+    public static void addOknumFeatures() {
+        List<RegistryKey<Biome>> allowedBiomes = Arrays.asList(
+                BiomeKeys.DESERT,
+                BiomeKeys.BADLANDS
+        );
+
+        if (OKNUM_ORE.isRegistered())
+            OKNUM_ORE.addFeatures(allowedBiomes);
     }
 
     public static List<Ore> getOres() {

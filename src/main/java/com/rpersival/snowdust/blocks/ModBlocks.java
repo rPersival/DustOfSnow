@@ -9,7 +9,6 @@ import net.minecraft.block.Material;
 import net.minecraft.block.OreBlock;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.sound.BlockSoundGroup;
-
 import java.util.List;
 
 public class ModBlocks {
@@ -29,6 +28,20 @@ public class ModBlocks {
     );
 
     @Register
+    public static final ItemBlock DENSE_SANDSTONE_BRICKS = new ItemBlock(
+            "dense_sandstone_bricks",
+            new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(40.0f, 1200.0f))
+    );
+
+    @Register
+    public static final ItemBlock QUICK_SAND = new ItemBlock(
+            "quick_sand",
+            new QuickSandBlock(14406560, FabricBlockSettings.of(Material.AGGREGATE).strength(0.5f).sounds(BlockSoundGroup.SAND))
+    );
+
+    //ORE
+
+    @Register
     public static final ItemBlock CRAUNIUM_ORE = new ItemBlock(
             "craunium_ore",
             new OreBlock(FabricBlockSettings.of(Material.STONE)
@@ -43,15 +56,17 @@ public class ModBlocks {
     );
 
     @Register
-    public static final ItemBlock DENSE_SANDSTONE_BRICKS = new ItemBlock(
-            "dense_sandstone_bricks",
-            new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(40.0f, 1200.0f))
+    public static final ItemBlock OKNUM_ORE = new ItemBlock(
+            "oknum_ore",
+            new OreBlock(FabricBlockSettings.of(Material.STONE)
+                    .strength(1.8f).sounds(BlockSoundGroup.STONE).requiresTool())
     );
 
     @Register
-    public static final ItemBlock QUICK_SAND = new ItemBlock(
-            "quick_sand",
-            new Block(FabricBlockSettings.of(Material.AGGREGATE).strength(0.5f).sounds(BlockSoundGroup.SAND))
+    public static final ItemBlock DEEPSLATE_OKNUM_ORE = new ItemBlock(
+            "deepslate_oknum_ore",
+            new OreBlock(FabricBlockSettings.of(Material.STONE)
+                    .strength(1.8f).sounds(BlockSoundGroup.DEEPSLATE).requiresTool())
     );
 
     public static List<ItemBlock> getModBlocks() {

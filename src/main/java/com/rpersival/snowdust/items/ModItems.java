@@ -47,6 +47,10 @@ public class ModItems {
     public static final Pair<Item, String> SEALED_SOULS = new Pair<>(
             new SealedSoulsItem(ItemSettingsGenerator.getDefaultItemSettings()), "sealed_souls");
 
+    @Register
+    public static final Pair<Item, String> OKNUM = new Pair<>(
+            new Item(ItemSettingsGenerator.getDefaultItemSettings()), "oknum");
+
 
     // Tools
     @Register
@@ -81,7 +85,10 @@ public class ModItems {
             new IceBootsItem(ModMaterials.TRUE_ICE_ARMOR_MATERIAL, EquipmentSlot.FEET,
                     ItemSettingsGenerator.getDefaultItemSettings().rarity(Rarity.EPIC)), "ice_boots");
 
-
+    @Register
+    public static final Pair<ArmorItem, String> CURSE_CRONE = new Pair<>(
+            new ArmorItem(ModMaterials.CURSE_CRONE_MATERIAL, EquipmentSlot.HEAD,
+                    ItemSettingsGenerator.getDefaultItemSettings().rarity(Rarity.RARE)), "cursed_crown");
 
 
     @SuppressWarnings("unchecked")

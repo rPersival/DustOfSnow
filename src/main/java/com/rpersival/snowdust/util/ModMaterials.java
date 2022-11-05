@@ -1,5 +1,6 @@
 package com.rpersival.snowdust.util;
 
+import com.rpersival.snowdust.items.CursedCrownMaterial;
 import com.rpersival.snowdust.items.DesertToolMaterial;
 import com.rpersival.snowdust.items.TrueIceArmorMaterial;
 import com.rpersival.snowdust.items.TrueIceToolMaterial;
@@ -12,5 +13,6 @@ public class ModMaterials {
     public static final ToolMaterial DESERT_MATERIAL = new DesertToolMaterial();
     //ARMOUR
     public static final ArmorMaterial TRUE_ICE_ARMOR_MATERIAL = new TrueIceArmorMaterial();
+    public static final ArmorMaterial CURSE_CRONE_MATERIAL = new CursedCrownMaterial();
 
 }

@@ -9,6 +9,7 @@
   "item.snowdust.soul_sickle": "Soul Sickle",
   "item.snowdust.desert_stick": "Desert Stick",
   "item.snowdust.sealed_souls": "Sealed Souls",
+  "item.snowdust.oknum": "Oknum",
 
   "enchantment.snowdust.ice_rejection": "Ice Rejection",
 
@@ -16,11 +17,14 @@
   "item.snowdust.ice_chestplate": "Ice Chestplate",
   "item.snowdust.ice_leggins": "Ice Leggins",
   "item.snowdust.ice_boots": "Ice Boots",
+  "item.snowdust.curse_crone": "Curse Crone",
 
   "block.snowdust.test_block": "Heisenberg",
   "block.snowdust.craunium_ore": "Craunium Ore",
   "block.snowdust.deepslate_craunium_ore": "Deepslate Craunium Ore",
   "block.snowdust.breakable_ice": "Fragile Ice",
   "block.snowdust.dense_sandstone_bricks": "Dense Sandstone Bricks",
-  "block.snowdust.quick_sand": "Quick Sand"
+  "block.snowdust.quick_sand": "Quick Sand",
+  "block.snowdust.oknum_ore" : "Oknum Ore",
+  "block.snowdust.deepslate_oknum_ore": "Deepslate Oknum Ore"
 }
