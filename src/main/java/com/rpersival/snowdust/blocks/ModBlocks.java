@@ -36,7 +36,8 @@ public class ModBlocks {
     @Register
     public static final ItemBlock QUICK_SAND = new ItemBlock(
             "quick_sand",
-            new QuickSandBlock(14406560, FabricBlockSettings.of(Material.AGGREGATE).strength(0.5f).sounds(BlockSoundGroup.SAND))
+            new QuickSandBlock(14406560, FabricBlockSettings.of(Material.AGGREGATE).strength(0.5f)
+                    .sounds(BlockSoundGroup.SAND).dynamicBounds())
     );
 
     //ORE

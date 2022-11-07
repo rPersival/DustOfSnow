@@ -4,6 +4,7 @@ import com.rpersival.snowdust.util.LootTableInjection;
 import com.rpersival.snowdust.util.ModOres;
 import com.rpersival.snowdust.util.ModRegistry;
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.client.render.CameraSubmersionType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,7 +16,7 @@ public class DustOfSnow implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		LOGGER.info("Hello from Dust of Snow!");
-
+		LOGGER.info(CameraSubmersionType.values()[4].name());
 		registerEverything();
 	}
 

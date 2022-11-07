@@ -26,5 +26,7 @@
   "block.snowdust.dense_sandstone_bricks": "Dense Sandstone Bricks",
   "block.snowdust.quick_sand": "Quick Sand",
   "block.snowdust.oknum_ore" : "Oknum Ore",
-  "block.snowdust.deepslate_oknum_ore": "Deepslate Oknum Ore"
+  "block.snowdust.deepslate_oknum_ore": "Deepslate Oknum Ore",
+
+  "death.attack.quickSandSuffocation": "%1$s suffocated in Quick Sand"
 }
