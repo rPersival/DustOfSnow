@@ -6,6 +6,7 @@
   "mixins": [
     "CameraSubmersionTypeMixin",
     "DamageEnchantmentMixin",
+    "FallingBlockEntityMixin",
     "IceBlockMixin",
     "PlayerEntityMixin",
     "StructureFeatureAccessor"

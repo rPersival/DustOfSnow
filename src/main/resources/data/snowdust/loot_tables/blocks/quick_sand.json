@@ -26,13 +26,12 @@
                 }
               ],
               "name": "snowdust:quick_sand"
+            },
+            {
+              "type": "minecraft:item",
+              "name": "minecraft:sand"
             }
-          ],
-          "name": "minecraft:sand"
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:sand"
+          ]
         }
       ],
       "conditions": [

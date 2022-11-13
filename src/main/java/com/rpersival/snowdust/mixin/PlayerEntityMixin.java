@@ -17,7 +17,7 @@ public abstract class PlayerEntityMixin {
     public void getBlockBreakingSpeed(BlockState block, CallbackInfoReturnable<Float> cir, float f) {
         PlayerEntity thisPlayer = (PlayerEntity) (Object) this;
         if (thisPlayer.getBlockStateAtPos().isOf(ModBlocks.QUICK_SAND.getBlock()))
-            f /= 7.5f;
+            f /= 10.0f;
         cir.setReturnValue(f);
     }
 }
