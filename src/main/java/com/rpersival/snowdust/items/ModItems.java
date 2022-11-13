@@ -51,6 +51,18 @@ public class ModItems {
     public static final Pair<Item, String> OKNUM = new Pair<>(
             new Item(ItemSettingsGenerator.getDefaultItemSettings()), "oknum");
 
+    @Register
+    public static final Pair<Item, String> ETERNAL_FLAME_CRYSTAL = new Pair<>(
+            new Item(ItemSettingsGenerator.getDefaultItemSettings().rarity(Rarity.RARE)), "eternal_flame_crystal");
+
+    @Register
+    public static final Pair<Item, String> BREATH_OF_DESERT = new Pair<>(
+            new Item(ItemSettingsGenerator.getDefaultItemSettings().rarity(Rarity.RARE)), "breath_of_desert");
+
+    @Register
+    public static final Pair<Item, String > OKNUM_INGOT = new Pair<>(
+            new Item(ItemSettingsGenerator.getDefaultItemSettings()),"oknum_ingot");
+
 
     // Tools
     @Register
@@ -66,7 +78,7 @@ public class ModItems {
 
     // Armor
     @Register
-    public static final Pair<IceHelmetItem, String> TRUE_ICE_HELMET = new Pair<>(
+    public static final Pair<ArmorItem, String> TRUE_ICE_HELMET = new Pair<>(
             new IceHelmetItem(ModMaterials.TRUE_ICE_ARMOR_MATERIAL, EquipmentSlot.HEAD,
                     ItemSettingsGenerator.getDefaultItemSettings().rarity(Rarity.EPIC)), "ice_helmet");
 
@@ -89,6 +101,26 @@ public class ModItems {
     public static final Pair<ArmorItem, String> CURSE_CRONE = new Pair<>(
             new ArmorItem(ModMaterials.CURSE_CRONE_MATERIAL, EquipmentSlot.HEAD,
                     ItemSettingsGenerator.getDefaultItemSettings().rarity(Rarity.RARE)), "cursed_crown");
+
+    @Register
+    public static final Pair<ArmorItem, String> FLAME_HELMET = new Pair<>(
+            new FlameHelmetItem(ModMaterials.ETERNAL_FLAME_CRYSTAL_MATERIAL, EquipmentSlot.HEAD,
+                    ItemSettingsGenerator.getDefaultItemSettings().rarity(Rarity.EPIC)), "flame_helmet");
+
+    @Register
+    public static final Pair<ArmorItem, String> FLAME_CHESTPLATE = new Pair<>(
+            new FlameChestplateItem(ModMaterials.ETERNAL_FLAME_CRYSTAL_MATERIAL, EquipmentSlot.CHEST,
+                    ItemSettingsGenerator.getDefaultItemSettings().rarity(Rarity.EPIC)), "flame_chestplate");
+
+    @Register
+    public static final Pair<ArmorItem, String> FLAME_LEGGINS = new Pair<>(
+            new FlameLegginsItem(ModMaterials.ETERNAL_FLAME_CRYSTAL_MATERIAL, EquipmentSlot.LEGS,
+                    ItemSettingsGenerator.getDefaultItemSettings().rarity(Rarity.EPIC)), "flame_leggins");
+
+    @Register
+    public static final Pair<ArmorItem, String> FLAME_BOOTS = new Pair<>(
+            new FlameBootsItem(ModMaterials.ETERNAL_FLAME_CRYSTAL_MATERIAL, EquipmentSlot.FEET,
+                    ItemSettingsGenerator.getDefaultItemSettings().rarity(Rarity.EPIC)), "flame_boots");
 
 
     @SuppressWarnings("unchecked")

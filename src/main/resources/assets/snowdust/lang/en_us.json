@@ -10,14 +10,22 @@
   "item.snowdust.desert_stick": "Desert Stick",
   "item.snowdust.sealed_souls": "Sealed Souls",
   "item.snowdust.oknum": "Oknum",
+  "item.snowdust.oknum_ingot": "Oknum Ingot",
+  "item.snowdust.breath_of_desert": "Breath of the Desert",
+  "item.snowdust.eternal_flame_crystal": "Eternal Flame Crystal",
 
   "enchantment.snowdust.ice_rejection": "Ice Rejection",
+  "enchantment.snowdust.fiery_rejection": "Fiery Rejection",
 
   "item.snowdust.ice_helmet": "Ice Helmet",
   "item.snowdust.ice_chestplate": "Ice Chestplate",
   "item.snowdust.ice_leggins": "Ice Leggins",
   "item.snowdust.ice_boots": "Ice Boots",
   "item.snowdust.curse_crone": "Curse Crone",
+  "item.snowdust.flame_helmet": "Flame Helmet",
+  "item.snowdust.flame_chestplate": "Flame Chestplate",
+  "item.snowdust.flame_leggins": "Flame Leggins",
+  "item.snowdust.flame_boots": "Flame Boots",
 
   "block.snowdust.test_block": "Heisenberg",
   "block.snowdust.craunium_ore": "Craunium Ore",
