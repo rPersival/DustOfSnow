@@ -4,11 +4,18 @@
   "package": "com.rpersival.snowdust.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "CameraSubmersionTypeMixin",
     "DamageEnchantmentMixin",
+    "FallingBlockEntityMixin",
     "IceBlockMixin",
+    "PlayerEntityMixin",
     "StructureFeatureAccessor"
   ],
   "client": [
+    "BackgroundRendererAccessor",
+    "BackgroundRendererMixin",
+    "CameraAccessor",
+    "CameraMixin",
     "TitleScreenAccessor",
     "TitleScreenMixin"
   ],

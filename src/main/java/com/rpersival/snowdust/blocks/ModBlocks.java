@@ -5,6 +5,7 @@ import com.rpersival.snowdust.util.Util;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.block.OreBlock;
 import net.minecraft.client.render.RenderLayer;
@@ -36,11 +37,11 @@ public class ModBlocks {
     @Register
     public static final ItemBlock QUICK_SAND = new ItemBlock(
             "quick_sand",
-            new QuickSandBlock(14406560, FabricBlockSettings.of(Material.AGGREGATE).strength(0.5f).sounds(BlockSoundGroup.SAND))
+            new QuickSandBlock(14406560, FabricBlockSettings.of(Material.AGGREGATE).strength(0.75f)
+                    .sounds(BlockSoundGroup.SAND).dynamicBounds(), Blocks.SAND)
     );
 
-    //ORE
-
+    // ORE
     @Register
     public static final ItemBlock CRAUNIUM_ORE = new ItemBlock(
             "craunium_ore",

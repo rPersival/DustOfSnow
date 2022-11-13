@@ -15,7 +15,6 @@ public class DustOfSnow implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		LOGGER.info("Hello from Dust of Snow!");
-
 		registerEverything();
 	}
 
