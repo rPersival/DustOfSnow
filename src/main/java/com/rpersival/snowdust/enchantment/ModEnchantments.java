@@ -14,6 +14,10 @@ public class ModEnchantments {
     public static Pair<Enchantment, String> ICE_REJECTION =
             new Pair<>(new IceRejectionEnchantment(), "ice_rejection");
 
+    @Register
+    public static Pair<Enchantment, String> FIERY_REJECTION = new Pair<>(new FieryRejectionEnchantment(),
+            "fiery_rejection");
+
     @SuppressWarnings("unchecked")
     public static List<Pair<Enchantment, String>> getEnchantments() {
         return (List<Pair<Enchantment, String>>)
