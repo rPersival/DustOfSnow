@@ -1,0 +1,42 @@
+{
+  "item.snowdust.breath_of_winter": "Морозное дыхание",
+  "item.snowdust.craunium_ingot": "Крауниумный слиток",
+  "item.snowdust.ice_axe": "Ледоруб",
+  "item.snowdust.true_ice": "Истинный лёд",
+  "item.snowdust.ice_stick": "Замороженная палка",
+  "item.snowdust.craunium": "Крауниум",
+  "item.snowdust.snow_essence":"Эссенция снега",
+  "item.snowdust.soul_sickle": "Коса смерти",
+  "item.snowdust.desert_stick": "Пустынная палка",
+  "item.snowdust.sealed_souls": "Запечатанная душа",
+  "item.snowdust.oknum": "Окнум",
+  "item.snowdust.oknum_ingot": "Окнумный слиток",
+  "item.snowdust.breath_of_desert": "Пустынное дыхание",
+  "item.snowdust.eternal_flame_crystal": "Кристалл вечного огня",
+
+  "enchantment.snowdust.ice_rejection": "Отторжение льда",
+  "enchantment.snowdust.fiery_rejection": "Отторжение огня",
+
+  "item.snowdust.ice_helmet": "Ледяной шлем",
+  "item.snowdust.ice_chestplate": "Ледяной нагрудник",
+  "item.snowdust.ice_leggins": "Ледянные поножи",
+  "item.snowdust.ice_boots": "Ледянные ботинки",
+  "item.snowdust.cursed_crown": "Проклятая корона",
+  "item.snowdust.flame_helmet": "Огненный шлем",
+  "item.snowdust.flame_chestplate": "Огненный нагрудник",
+  "item.snowdust.flame_leggins": "Огненные поножи",
+  "item.snowdust.flame_boots": "Огненные ботинки",
+
+  "block.snowdust.test_block": "Heisenberg",
+  "block.snowdust.craunium_ore": "Крауниумная руда",
+  "block.snowdust.deepslate_craunium_ore": "Краунимноносный глубинный сланец",
+  "block.snowdust.breakable_ice": "Хрупкий лёд",
+  "block.snowdust.dense_sandstone_bricks": "Твёрдые кирпичи из песчаника",
+  "block.snowdust.quick_sand": "Зыбучие пески",
+  "block.snowdust.oknum_ore" : "Окнумная руда",
+  "block.snowdust.deepslate_oknum_ore": "Окнумноносный глубинный сланец",
+
+  "death.attack.quickSandSuffocation": "%1$s задохнулся в зыбучих песках",
+
+  "itemGroup.snowdust.snowdustgroup": "Dust of Snow items"
+}

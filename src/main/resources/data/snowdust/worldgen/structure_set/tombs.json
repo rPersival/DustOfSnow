@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "snowdust:tombs",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 273652732,
+    "spacing": 32,
+    "separation": 12,
+    "type": "minecraft:random_spread"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "snowdust:old_house",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 832761662,
+    "spacing": 32,
+    "separation": 12,
+    "type": "minecraft:random_spread"
+  }
+}

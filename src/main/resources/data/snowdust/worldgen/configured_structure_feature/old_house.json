@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:village",
+
+  "config": {
+    "start_pool": "snowdust:old_house_start_pool",
+    "size": 7
+  },
+
+  "biomes": "#snowdust:has_structure/graveyard_dungeon_biomes",
+  "adapt_noise": true,
+  "spawn_overrides": { }
+}

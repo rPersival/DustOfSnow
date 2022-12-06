@@ -10,7 +10,7 @@ public class ModMaterials {
     public static final ToolMaterial DESERT_MATERIAL = new DesertToolMaterial();
     //ARMOUR
     public static final ArmorMaterial TRUE_ICE_ARMOR_MATERIAL = new TrueIceArmorMaterial();
-    public static final ArmorMaterial CURSE_CRONE_MATERIAL = new CursedCrownMaterial();
+    public static final ArmorMaterial CURSED_CROWN_MATERIAL = new CursedCrownMaterial();
     public  static final ArmorMaterial ETERNAL_FLAME_CRYSTAL_MATERIAL = new EternalFlameCrystalMaterial();
 
 }

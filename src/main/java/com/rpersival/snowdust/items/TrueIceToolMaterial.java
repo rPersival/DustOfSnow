@@ -32,6 +32,6 @@ public class TrueIceToolMaterial implements ToolMaterial {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(ModItems.ICE_INGOT.getLeft());
+        return Ingredient.ofItems(ModItems.CRAUNIUM_INGOT.getLeft());
     }
 }

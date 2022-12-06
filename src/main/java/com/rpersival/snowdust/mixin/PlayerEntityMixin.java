@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 @Mixin(PlayerEntity.class)
 public abstract class PlayerEntityMixin {
 
-    @Inject(at= @At("RETURN"), method = "getBlockBreakingSpeed", locals = LocalCapture.CAPTURE_FAILHARD,
+    @Inject(at = @At("RETURN"), method = "getBlockBreakingSpeed", locals = LocalCapture.CAPTURE_FAILHARD,
             cancellable = true)
     public void getBlockBreakingSpeed(BlockState block, CallbackInfoReturnable<Float> cir, float f) {
         PlayerEntity thisPlayer = (PlayerEntity) (Object) this;

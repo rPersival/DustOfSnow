@@ -16,18 +16,19 @@ public class SealedSoulsItem extends Item {
     }
 
     @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        ItemStack itemStack = user.getStackInHand(hand);
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity entity, Hand hand) {
+        ItemStack itemStack = entity.getStackInHand(hand);
 
-        world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_EXPERIENCE_ORB_PICKUP,
-                SoundCategory.NEUTRAL, 0.5f, 0.4f / (world.getRandom().nextFloat() * 0.4f + 0.8f));
+        world.playSound(entity.getX(), entity.getY(), entity.getZ(), SoundEvents.ENTITY_EXPERIENCE_ORB_PICKUP,
+                SoundCategory.PLAYERS, 0.5f,
+                (world.getRandom().nextFloat() - world.getRandom().nextFloat()) * 0.35f + 0.9f, false);
 
-        user.addExperience((int) Math.round(Math.random() * 15 + 5));
+        entity.addExperience((int) Math.round(Math.random() * 15 + 5));
 
-        if (!user.isCreative())
+        if (!entity.isCreative())
             itemStack.decrement(1);
 
-        return super.use(world, user, hand);
+        return super.use(world, entity, hand);
     }
 
     @Override

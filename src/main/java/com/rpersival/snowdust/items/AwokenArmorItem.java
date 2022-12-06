@@ -1,19 +1,27 @@
 package com.rpersival.snowdust.items;
 
-import com.rpersival.snowdust.enchantment.ModEnchantments;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.*;
+import net.minecraft.item.ArmorItem;
+import net.minecraft.item.ArmorMaterial;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemUsageContext;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 
-public class IceChestplateItem extends ArmorItem {
-    public IceChestplateItem(ArmorMaterial armorMaterial, EquipmentSlot equipmentSlot, Item.Settings settings) {
-        super(armorMaterial, equipmentSlot, settings);
+public class AwokenArmorItem extends ArmorItem {
+
+    private final Enchantment enchantment;
+    private final Block block;
+
+    public AwokenArmorItem(ArmorMaterial material, EquipmentSlot slot, Settings settings, Enchantment enchantment,
+                           Block block) {
+        super(material, slot, settings);
+        this.enchantment = enchantment;
+        this.block = block;
     }
 
     @Override
@@ -22,14 +30,13 @@ public class IceChestplateItem extends ArmorItem {
         PlayerEntity player = context.getPlayer();
         if (player == null)
             return super.useOnBlock(context);
-        Enchantment enchantment = ModEnchantments.ICE_REJECTION.getLeft();
         Block clickedBlock = context.getWorld().getBlockState(positionClicked).getBlock();
         ItemStack currentItem = player.getMainHandStack();
 
         boolean isCompatible = enchantment.isAcceptableItem(currentItem) &&
                 EnchantmentHelper.isCompatible(EnchantmentHelper.get(currentItem).keySet(), enchantment);
 
-        if (clickedBlock.equals(Blocks.DIAMOND_BLOCK) && isCompatible) {
+        if (clickedBlock.equals(block) && isCompatible) {
             currentItem.addEnchantment(enchantment, 1);
             return ActionResult.CONSUME;
         }

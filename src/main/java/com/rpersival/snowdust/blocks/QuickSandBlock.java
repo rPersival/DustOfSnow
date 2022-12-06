@@ -43,7 +43,7 @@ public class QuickSandBlock extends FallingBlock {
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
         if (entity.getBlockStateAtPos().isOf(this)) {
             entity.slowMovement(state, new Vec3d(0.5f, 0.15f, 0.5f));
-            if (entity instanceof LivingEntity livingEntity && isEntitySubmerged(livingEntity, pos)) {
+            if (entity instanceof LivingEntity livingEntity && canSuffocate(livingEntity, pos)) {
                 if (livingEntity.hasVehicle() && livingEntity.getVehicle() != null) {
                     livingEntity.stopRiding();
                 }
@@ -51,6 +51,9 @@ public class QuickSandBlock extends FallingBlock {
                     suffocate(livingEntity);
                 }
             }
+        } else if (entity.hasPassengers() && !entity.getEntityWorld().isClient()) {
+            entity.getPassengerList().stream().filter(x -> x instanceof LivingEntity livingEntity &&
+                    canSuffocate(livingEntity, pos)).forEach(Entity::stopRiding);
         }
     }
 
@@ -148,5 +151,9 @@ public class QuickSandBlock extends FallingBlock {
 
     private static void suffocate(LivingEntity entity) {
         entity.damage(ModDamageSource.QUICK_SAND_SUFFOCATION, 1.0f);
+    }
+
+    private boolean canSuffocate(LivingEntity entity, BlockPos pos) {
+        return entity.isAlive() && isEntitySubmerged(entity, pos);
     }
 }
