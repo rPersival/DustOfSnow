@@ -23,6 +23,7 @@ public class DustOfSnow implements ModInitializer {
 		ModRegistry.registerBlocks();
 		ModRegistry.registerStructureFeatures();
 		ModRegistry.registerEnchantment();
+		ModRegistry.registerAttributes();
 		ModOres.generateOres();
 		LootTableInjection.injectIntoVanillaLootTable();
 	}

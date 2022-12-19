@@ -4,8 +4,10 @@ import com.rpersival.snowdust.DustOfSnow;
 import com.rpersival.snowdust.blocks.ItemBlock;
 import com.rpersival.snowdust.blocks.ModBlocks;
 import com.rpersival.snowdust.enchantment.ModEnchantments;
+import com.rpersival.snowdust.entitys.custom.ScarabEntity;
 import com.rpersival.snowdust.items.ModItems;
 import com.rpersival.snowdust.mixin.StructureFeatureAccessor;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -19,6 +21,9 @@ import net.minecraft.world.gen.feature.StructureFeature;
 import java.util.List;
 
 public class ModRegistry {
+    public static void registerAttributes() {
+        FabricDefaultAttributeRegistry.register(ModEntities.SCARAB, ScarabEntity.setAttributes());
+    }
 
     public static void registerItems() {
         List<Pair<Item, String>> modItems = ModItems.getModItems();
