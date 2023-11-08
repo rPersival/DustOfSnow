@@ -6,6 +6,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.FallingBlockEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.pathing.NavigationType;
+import net.minecraft.entity.vehicle.BoatEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.tag.FluidTags;
@@ -43,17 +44,19 @@ public class QuickSandBlock extends FallingBlock {
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
         if (entity.getBlockStateAtPos().isOf(this)) {
             entity.slowMovement(state, new Vec3d(0.5f, 0.15f, 0.5f));
-            if (entity instanceof LivingEntity livingEntity && canSuffocate(livingEntity, pos)) {
-                if (livingEntity.hasVehicle() && livingEntity.getVehicle() != null) {
+            if (entity instanceof LivingEntity livingEntity && canSuffocate(livingEntity, pos, 0)) {
+                //TODO: refactor
+                if (livingEntity.hasVehicle()) {
                     livingEntity.stopRiding();
                 }
                 if (livingEntity.isAlive()) {
                     suffocate(livingEntity);
                 }
+            } else if (entity.hasPassengers() && !entity.getEntityWorld().isClient()) {
+                entity.getPassengerList().stream().filter(x -> x instanceof LivingEntity livingEntity &&
+                        canSuffocate(livingEntity, pos, (entity instanceof BoatEntity ? 0.06 : 0)))
+                        .forEach(Entity::stopRiding);
             }
-        } else if (entity.hasPassengers() && !entity.getEntityWorld().isClient()) {
-            entity.getPassengerList().stream().filter(x -> x instanceof LivingEntity livingEntity &&
-                    canSuffocate(livingEntity, pos)).forEach(Entity::stopRiding);
         }
     }
 
@@ -143,9 +146,9 @@ public class QuickSandBlock extends FallingBlock {
         return state.getFluidState().isIn(FluidTags.WATER);
     }
 
-    private static boolean isEntitySubmerged(Entity entity, BlockPos pos) {
+    private static boolean isEntitySubmerged(Entity entity, BlockPos pos, double offset) {
         double d = entity.getEyeY() - 1.1111111119389534;
-        double e = pos.getY();
+        double e = pos.getY() + offset;
         return e > d;
     }
 
@@ -153,7 +156,7 @@ public class QuickSandBlock extends FallingBlock {
         entity.damage(ModDamageSource.QUICK_SAND_SUFFOCATION, 1.0f);
     }
 
-    private boolean canSuffocate(LivingEntity entity, BlockPos pos) {
-        return entity.isAlive() && isEntitySubmerged(entity, pos);
+    private boolean canSuffocate(LivingEntity entity, BlockPos pos, double offset) {
+        return entity.isAlive() && isEntitySubmerged(entity, pos, offset);
     }
 }
