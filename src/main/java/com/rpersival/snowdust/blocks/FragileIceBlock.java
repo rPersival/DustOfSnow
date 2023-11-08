@@ -42,7 +42,7 @@ public class FragileIceBlock extends IceBlock {
     @Override
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
         super.onSteppedOn(world, pos, state, entity);
-        if (entity.fallDistance != 0.0f) {
+         if (entity.fallDistance != 0.0f) {
             return;
         }
         DustOfSnow.LOGGER.warn("onSteppedOn fired!");
@@ -76,7 +76,6 @@ public class FragileIceBlock extends IceBlock {
         if (server != null) {
             ServerWorld worldServer = server.getWorld(world.getRegistryKey());
             if (worldServer != null) {
-//                worldServer.breakBlock(pos, false, entity);
                 this.breakAdjacentBlocks(worldServer, pos, currentState, entity, fallDistance);
             }
         }
@@ -173,7 +172,6 @@ public class FragileIceBlock extends IceBlock {
         }
         double cumulativeVelocity = velocity.length();
         double propagation = 20.0d * Math.pow((cumulativeVelocity), 0.55d) + fallFunction;
-//        double propagation = 20.0d * Math.pow((cumulativeVelocity), 0.55d) + 2.89d * Math.pow(fallDistance, 1.0d / 1.9d);
         return Math.min(Math.max(propagation, min), maxPropagation);
     }
 
@@ -181,111 +179,4 @@ public class FragileIceBlock extends IceBlock {
     public PistonBehavior getPistonBehavior(BlockState state) {
         return PistonBehavior.DESTROY;
     }
-
 }
-
-
-//    private double calculateDistance(double x1, double z1, int x2, int z2) {
-//        return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(z1 - z2, 2));
-//    }
-
-//    private List<BlockPos> getRadiusBlocks(double x, double z, int y, double radius, ServerWorld world) {
-//        List<BlockPos> blocks = new ArrayList<>();
-//
-//        int minX = (int) Math.floor(x - radius);
-//        int maxX = (int) Math.ceil(x + radius);
-//        int minZ = (int) Math.floor(z - radius);
-//        int maxZ = (int) Math.ceil(z + radius);
-//        Math.round()
-//        for (int i = minX; i <= maxX; i++) {
-//            for (int j = minZ; j <= maxZ; j++) {
-//                BlockPos pos = new BlockPos(i, y, j);
-//                if (!world.isAir(pos)) {
-//                    double distance = calculateDistance(x, z, i, j);
-//                    if (distance <= radius) {
-//                        blocks.add(pos);
-//                    }
-//                }
-//            }
-//        }
-//
-//        return blocks;
-//    }
-//    public List<BlockPos> getSquaresByRadius(double x, double z, double y, double radius, BlockState state, ServerWorld world) {
-//        List<BlockPos> squaresInRadius = new ArrayList<>();
-//        Set<BlockPos> visited = new HashSet<>();
-//
-//        Queue<BlockPos> queue = new ArrayDeque<>();
-//        BlockPos centerSquare = new BlockPos(x, y, z);
-//
-//        int[] dx = {0, 1, 0, -1};
-//        int[] dz = {1, 0, -1, 0};
-//
-//        if (!world.isAir(centerSquare)) {
-//            queue.offer(centerSquare);
-//            visited.add(centerSquare);
-//        }
-//
-//        while (!queue.isEmpty()) {
-//            BlockPos currentSquare = queue.poll();
-//            double distance = calculateDistance(x, z, currentSquare.getX(), currentSquare.getZ());
-//
-//            if (distance <= radius) {
-//                squaresInRadius.add(currentSquare);
-//            }
-//
-//            if (distance < radius) {
-//                for (int i = 0; i < 4; i++) {
-//                    int newX = currentSquare.getX() + dx[i];
-//                    int newZ = currentSquare.getZ() + dz[i];
-//
-//                    BlockPos neighbor = new BlockPos(newX, y, newZ);
-//
-//                    if (!world.isAir(neighbor) && world.getBlockState(neighbor).equals(state) && !visited.contains(neighbor)) {
-//                        queue.offer(neighbor);
-//                        visited.add(neighbor);
-//                    }
-//                }
-//            }
-//        }
-//
-//        return squaresInRadius;
-//    }
-
-
-//    public static Block[] getEntityBlocks(double x, double y, double z, double length, double degree, ServerWorld world) {
-//        Block[] blocks = new Block[(int) Math.pow(length, 2)];
-//        AffineTransform transform = AffineTransform.getRotateInstance(Math.toRadians(degree));
-//        Point2D point = new Point2D.Double();
-//        int index = 0;
-//        for (double i = x - length / 2; i < x + length / 2; i++) {
-//            for (double j = z - length / 2; j < z + length / 2; j++) {
-//                point.setLocation(i, j);
-//                transform.transform(point, point);
-//                blocks[index] = world.getBlockState(new BlockPos((int) point.getX(), y, (int) point.getY())).getBlock();
-//                index++;
-//            }
-//        }
-//        return blocks;
-//    }
-
-
-
-//        Block[] blocks = getEntityBlocks(pos.getX(), pos.getY(), pos.getZ(), entity.getWidth(), entity.getYaw(), world);
-//        for (Block block : blocks) {
-//            DustOfSnow.LOGGER.info(block.toString());
-//
-//        }
-
-
-//        double decimalX = entity.prevX - (int) entity.prevX;
-//        double decimalZ = entity.prevZ - (int) entity.prevZ;
-//
-//        int xOffset = decimalX >= 0 ? (decimalX > 0.7 ? 1 : decimalX < 0.3 ? -1 : 0) :
-//                (decimalX < -0.7 ? -1 : decimalX > -0.3 ? 1 : 0);
-//
-//        int zOffset = decimalZ >= 0 ? (decimalZ > 0.7 ? 1 : decimalZ < 0.3 ? -1 : 0) :
-//                (decimalZ < -0.7 ? -1 : decimalZ > -0.3 ? 1 : 0);
-//
-//        BlockPos[] blockPos = { pos.south(zOffset), pos.east(xOffset), pos.east(xOffset).south(zOffset) };
-//
