@@ -25,7 +25,7 @@ public class ModBlocks {
             "breakable_ice",
             new FragileIceBlock(FabricBlockSettings.of(Material.ICE).strength(0.5f)
                     .slipperiness(0.98f).ticksRandomly()
-                    .sounds(BlockSoundGroup.GLASS).nonOpaque(), false)
+                    .sounds(BlockSoundGroup.GLASS).nonOpaque(), false, 20)
     );
 
     @Register
